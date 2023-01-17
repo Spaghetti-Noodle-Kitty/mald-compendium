@@ -1,10 +1,10 @@
 #include "zMath.h"
 
 #pragma region Static Data
-double Z_PI		= 3.14159265358979;
-double Z_Euler	= 2.71828182845904;
-double Deg2Rad = 360 / (Z_PI * 2);
-double Rad2Deg	= (Z_PI * 2) / 360;
+double ZPI		= 3.14159265358979;
+double ZEuler	= 2.71828182845904;
+double Deg2Rad = 360 / (ZPI * 2);
+double Rad2Deg	= (ZPI * 2) / 360;
 
 #pragma endregion
 
@@ -17,7 +17,7 @@ public:
 	{
 		X = PosX;
 		Y = PosY;
-		R = Clamp(0, 360, Rot);
+		R = zMath::Clamp(0, 360, Rot);
 		F = Force;
 	}
 };
@@ -31,9 +31,9 @@ public:
 		X = PosX;
 		Y = PosY;
 		Z = PosZ;
-		Rx = Clamp(0, 360, RotX);
-		Ry = Clamp(0, 360, RotY);
-		Rz = Clamp(0, 360, RotZ);
+		Rx = zMath::Clamp(0, 360, RotX);
+		Ry = zMath::Clamp(0, 360, RotY);
+		Rz = zMath::Clamp(0, 360, RotZ);
 		F = Force;
 	}
 };
@@ -160,7 +160,7 @@ double zMath::Log10(double Num)
 
 double zMath::Exp(double Num)
 {
-	return Pow(Z_Euler, Num);
+	return Pow(ZEuler, Num);
 }
 
 double zMath::Atan2(double y, double x)
@@ -199,7 +199,7 @@ double zMath::Atan(double AngleRad)
 
 double zMath::Asin(double AngleRad)
 {
-	return Z_PI / 2 - Acos(AngleRad);
+	return ZPI / 2 - Acos(AngleRad);
 }
 
 double zMath::Acos(double AngleRad)

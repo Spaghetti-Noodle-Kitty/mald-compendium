@@ -2,12 +2,22 @@
 class zMath
 {
 public:
-	Vector2D Vector2D;
-	Vector3D Vector3D;
+	class Vector2D
+	{
+	public:
+		double X, Y, R, F;
+		Vector2D(double PosX, double PosY, double Rot, double Force);
+	};
+	class Vector3D
+	{
+	public:
+		double X, Y, Z, Rx, Ry, Rz, F;
+		Vector3D(double PosX, double PosY, double PosZ, double RotX, double RotY, double RotZ, double Force);
+	};
 
 	// Static values //
-	static double Z_PI;
-	static double Z_Euler;
+	static double ZPI;
+	static double ZEuler;
 	static double Deg2Rad;
 	static double Rad2Deg;
 

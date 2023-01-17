@@ -1,10 +1,10 @@
 #include "zMath.h"
 
 #pragma region Static Data
-double ZPI		= 3.14159265358979;
-double ZEuler	= 2.71828182845904;
-double Deg2Rad = 360 / (ZPI * 2);
-double Rad2Deg	= (ZPI * 2) / 360;
+double zMath::ZPI		= 3.14159265358979;
+double zMath::ZEuler	= 2.71828182845904;
+double zMath::Deg2Rad	= 360 / (zMath::ZPI * 2);
+double zMath::Rad2Deg	= (zMath::ZPI * 2) / 360;
 
 #pragma endregion
 
@@ -160,7 +160,7 @@ double zMath::Log10(double Num)
 
 double zMath::Exp(double Num)
 {
-	return Pow(ZEuler, Num);
+	return Pow(zMath::ZEuler, Num);
 }
 
 double zMath::Atan2(double y, double x)
@@ -199,7 +199,7 @@ double zMath::Atan(double AngleRad)
 
 double zMath::Asin(double AngleRad)
 {
-	return ZPI / 2 - Acos(AngleRad);
+	return zMath::ZPI / 2 - Acos(AngleRad);
 }
 
 double zMath::Acos(double AngleRad)

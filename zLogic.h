@@ -9,6 +9,5 @@ public:
 	static bool OR		(bool StateA, bool StateB);
 	static bool XOR		(bool StateA, bool StateB);
 	static bool XNOR	(bool StateA, bool StateB);
-
 };
 
